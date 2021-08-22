@@ -1,0 +1,158 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing:  border-box;
+	/*
+	we do this because h and p tag have weird tag so we want to make sure all are the same
+	padding inside the box and margin outside the box
+	*/
+}
+
+body{
+	font-size: "Barlow Condensed ", "sans-serif"  ;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background: radial-gradient(
+    	134.34% 134.34% at 50% 0%,
+    	#1f3757 0%,
+    	#131537 100%
+  	);
+}
+
+/* dispaly and flex-direaction make the div that are found below to the columnar
+	1
+	2
+	3 like this
+*/
+
+.scoreboard{
+	margin-top: 30px;
+	border: 2px solid white;
+	border-radius: 15px;
+	width: 700px;
+	height: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+/* display and justify content make the element in a row and and add space b/n them*/
+
+.title{
+	margin-left: 30px;
+}
+
+.score{
+	background-color: #ffffff;
+	margin-right: 30px;
+	border: 2px solid black;
+	border-radius: 12px;
+	width: 80px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.score p{
+	color: #2a45c2;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bolder;
+	line-height: 19px;
+	letter-spacing: 2.5px;
+}
+
+.score h1{
+	color: #565468;
+	font-size: 35px;
+}
+
+.hands{
+	background-image: url('asset/triangle.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 476px;
+	height: 430px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 40px;
+	justify-content: center;
+}
+
+.paper{
+	margin-right: 20px;
+}
+
+.scissors{
+	margin-left: 20px;
+}
+
+.hands .hand{
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.hands .hand:hover{
+	transform: translate3d(0px, -8px, 0px);
+
+}
+
+.contest{
+	width: 900px;
+	display: flex;
+	display: none;
+}
+
+.contest > div{
+	flex:  1;
+}
+/* flex 1 means all div have the same importance so put the same width  and height */
+
+.contest h1{
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	margin: 25px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+}
+
+.contest img{
+	width: 250px;
+	height: 250px;
+}
+
+.contest .contestImage{
+	display: flex;
+	justify-content: center;
+}
+
+.contest .referee{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.contest .newgame{
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: white;
+	padding: 12px 12px;
+	border-radius: 13px;
+	transition: all 0.5s;
+}
+
+.contest .newgame:hover{
+	transform: translate3d(0px, -2px, 0px);
+	background-color: gray;
+}
